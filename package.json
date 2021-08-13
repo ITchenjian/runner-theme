@@ -1,6 +1,6 @@
 {
   "name": "runner-theme",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Theme generator cli tool for runner",
   "bin": {
     "runner-theme": "./bin/runner-theme",
