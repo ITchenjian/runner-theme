@@ -1,0 +1,57 @@
+{
+  "name": "runner-theme",
+  "version": "0.0.1",
+  "description": "Theme generator cli tool for runner",
+  "bin": {
+    "runner-theme": "./bin/runner-theme",
+    "rt": "./bin/runner-theme"
+  },
+  "files": [
+    "bin",
+    "lib"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "xo"
+  },
+  "xo": {
+    "space": true,
+    "rule": {
+      "semi": 0,
+      "unicorn/no-process-exit": 0,
+      "import/no-dynamic-require": 0
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ITchenjian/runner-theme.git"
+  },
+  "keywords": [
+    "runner-ui",
+    "vue",
+    "theme",
+    "cli"
+  ],
+  "author": "chenjian",
+  "engines": {
+    "node": ">=0.12.0"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "runner-theme-chalk": ">=0.1.0"
+  },
+  "dependencies": {
+    "commander": "^2.9.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-nop": "0.0.3",
+    "gulp-sass": "^3.1.0",
+    "ora": "^0.3.0",
+    "run-sequence": "^1.2.2"
+  },
+  "devDependencies": {
+    "runner-theme-chalk": "^0.1.0",
+    "xo": "^0.17.0"
+  }
+}
