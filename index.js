@@ -16,6 +16,12 @@ var fonts = function (opts) {
   }
 }
 
+var images = function (opts) {
+  return function () {
+    return task.images(Object.assign(opts, {message: 'build theme image'}))
+  }
+}
+
 exports.init = function (filePath) {
   filePath = {}.toString.call(filePath) === '[object String]' ? filePath : ''
   vars.init(filePath)
@@ -30,8 +36,9 @@ exports.watch = function (opts) {
 exports.run = function (opts, cb) {
   gulp.task('build', build(opts))
   gulp.task('fonts', fonts(opts))
+  gulp.task('images', images(opts))
   if (typeof cb === 'function') {
     return series('build', 'fonts', cb);
   }
-  return series('build', 'fonts');
+  return series('build', 'fonts', 'images');
 }
